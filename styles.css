@@ -69,6 +69,7 @@ a { color: inherit; text-decoration: none; }
 .feature-card p { margin: 0; color: var(--ink-soft); line-height: 1.7; }
 .feature-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
 .feature-tags span { padding: 6px 9px; border-radius: 6px; background: rgba(11,178,173,.1); color: var(--teal-deep); font-size: 12px; }
+.center-action { display: flex; justify-content: center; margin-top: 34px; }
 
 .pricing-section { background: rgba(255,255,255,.3); }
 .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
@@ -144,6 +145,23 @@ details p { max-width: 720px; margin: 14px 0 0; color: var(--ink-soft); line-hei
 .data-table tr:last-child td { border-bottom: 0; }
 .skill-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .skill-card { display: flex; flex-direction: column; min-height: 190px; padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.76); }
+.skill-grid-detailed { align-items: stretch; }
+.skill-toolbar { display: grid; grid-template-columns: minmax(250px, 360px) 1fr; gap: 16px; margin-bottom: 16px; padding: 18px; }
+.skill-search { display: grid; gap: 7px; }
+.skill-search label { color: var(--ink-soft); font-size: 12px; font-weight: 800; }
+.skill-search input { width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 11px 12px; background: #fbfffe; color: var(--ink); outline: 0; }
+.segmented { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.segmented-button { border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px; background: rgba(255,255,255,.68); color: var(--ink-soft); cursor: pointer; font-size: 12px; font-weight: 800; }
+.segmented-button.active, .segmented-button:hover { border-color: var(--teal); background: var(--mint); color: var(--teal-deep); }
+.skill-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+.skill-card-detailed { min-height: 330px; }
+.skill-card-top { display: flex; align-items: flex-start; gap: 14px; }
+.skill-order { color: #789795; font-size: 11px; font-weight: 800; letter-spacing: .04em; }
+.skill-card-top h3 { margin: 3px 0 0; }
+.skill-section { margin-top: 16px; }
+.skill-section strong { display: block; margin-bottom: 7px; font-size: 12px; color: var(--ink); }
+.skill-section ul { margin: 0; padding-left: 18px; color: var(--ink-soft); font-size: 12px; line-height: 1.65; }
+.skill-pro-card { background: linear-gradient(135deg, rgba(255,255,255,.78), rgba(255,246,222,.72)); border-color: rgba(211,167,92,.42); }
 .skill-icon { color: var(--coral); font-size: 28px; }
 .skill-card h3 { margin: 15px 0 7px; font-size: 17px; }
 .skill-card p { margin: 0; color: var(--ink-soft); font-size: 13px; line-height: 1.6; }
@@ -173,6 +191,34 @@ details p { max-width: 720px; margin: 14px 0 0; color: var(--ink-soft); line-hei
 .modal-close { border: 0; background: transparent; color: var(--ink-soft); cursor: pointer; font-size: 22px; }
 .modal-body { padding: 24px; }
 .modal-actions { display: flex; justify-content: end; gap: 10px; margin-top: 18px; }
+.login-screen { position: fixed; inset: 0; z-index: 30; display: grid; place-items: center; overflow: auto; padding: 46px 18px; background: radial-gradient(circle at 18% 12%, rgba(255,255,255,.22), transparent 25%), linear-gradient(155deg, #12bfb6 0%, #07a8a0 58%, #04928d 100%); }
+.login-card { position: relative; width: min(660px, 100%); border-radius: 22px; border: 1px solid rgba(255,255,255,.08); background: #101313; box-shadow: 0 30px 90px rgba(2,47,46,.32); color: #eaf8f6; overflow: hidden; }
+.login-card::after { content: ""; position: absolute; top: 0; right: 0; width: 7px; height: 100%; background: linear-gradient(#f1c95f, #ffe39a 48%, #f1c95f); opacity: .95; }
+.login-logo-panel { display: grid; justify-items: center; padding: 38px 52px 20px; }
+.login-logo-rings { position: relative; display: grid; place-items: center; width: 188px; height: 188px; border: 1px solid #dfc36c; border-radius: 50%; background: #fff; color: #ef6b83; font-size: 64px; box-shadow: inset 0 0 0 1px rgba(211,167,92,.34); }
+.login-logo-rings::before, .login-logo-rings::after { content: ""; position: absolute; inset: 18px; border: 2px solid rgba(211,167,92,.55); border-radius: 33% 67% 42% 58% / 52% 38% 62% 48%; transform: rotate(18deg); }
+.login-logo-rings::after { inset: 30px; border-color: rgba(211,167,92,.38); transform: rotate(-15deg); }
+.login-logo-rings span { position: relative; z-index: 1; }
+.login-logo-title { margin-top: -70px; color: #4e4e4e; font-size: 23px; font-weight: 600; letter-spacing: .05em; pointer-events: none; }
+.login-logo-subtitle { margin-top: 3px; color: #555; font-size: 17px; font-weight: 800; letter-spacing: .13em; pointer-events: none; }
+.login-form { display: grid; gap: 14px; padding: 0 52px 34px; }
+.login-form h1 { margin: 0 0 7px; color: #eefdfb; font-size: 34px; letter-spacing: 0; }
+.login-field { display: grid; gap: 10px; }
+.login-field label { color: #d8f4f1; font-size: 19px; font-weight: 700; }
+.login-field input { height: 56px; width: 100%; border: 2px solid rgba(144,212,208,.58); border-radius: 14px; padding: 0 22px; background: #14201f; color: #f6fffe; outline: 0; font-size: 20px; }
+.login-field input::placeholder { color: rgba(236,246,245,.48); }
+.login-field input:focus { border-color: #20c9c3; box-shadow: 0 0 0 4px rgba(32,201,195,.14); }
+.login-primary { height: 60px; margin-top: 6px; border: 0; border-radius: 15px; background: #17bdb8; color: #efffff; cursor: pointer; font-size: 22px; font-weight: 800; transition: .2s ease; }
+.login-primary:hover { background: #14aaa5; transform: translateY(-1px); }
+.login-divider { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 28px; color: #b8e6e2; font-size: 20px; }
+.login-divider span { height: 2px; background: rgba(161,220,216,.78); }
+.login-provider { display: grid; grid-template-columns: 72px 1fr 72px; align-items: center; min-height: 60px; border: 1px solid rgba(255,255,255,.16); border-radius: 14px; background: #111313; color: #e7f2f1; cursor: pointer; font-size: 21px; font-weight: 800; }
+.login-provider strong { justify-self: end; color: #4285f4; font-size: 32px; }
+.login-provider-accent { border-color: rgba(144,212,208,.62); color: #c8fbf6; }
+.login-provider-accent strong { color: #ffd84d; font-size: 26px; }
+.login-link, .login-register { justify-self: center; border: 0; background: transparent; cursor: pointer; }
+.login-link { margin-top: 8px; color: #8d9aa8; font-size: 18px; }
+.login-register { color: #12aaa5; font-size: 20px; font-weight: 700; }
 
 @media (max-width: 920px) {
   .top-nav { gap: 15px; font-size: 12px; }
@@ -183,7 +229,8 @@ details p { max-width: 720px; margin: 14px 0 0; color: var(--ink-soft); line-hei
   .sidebar { flex-basis: 208px; }
   .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
   .content-grid { grid-template-columns: 1fr; }
-  .skill-grid { grid-template-columns: repeat(2, 1fr); }
+  .skill-grid, .skill-summary { grid-template-columns: repeat(2, 1fr); }
+  .skill-toolbar { grid-template-columns: 1fr; }
 }
 @media (max-width: 680px) {
   .section-shell { width: min(100% - 30px, 1180px); }
@@ -194,7 +241,7 @@ details p { max-width: 720px; margin: 14px 0 0; color: var(--ink-soft); line-hei
   .hero-copy p { font-size: 16px; }
   .hero-art { transform: scale(.82); margin: -36px 0; }
   .section-block { padding: 72px 0; }
-  .feature-grid, .pricing-grid, .skill-grid, .settings-grid { grid-template-columns: 1fr; }
+  .feature-grid, .pricing-grid, .skill-grid, .skill-summary, .settings-grid { grid-template-columns: 1fr; }
   .price-card-featured { transform: none; }
   .about-section { align-items: start; flex-direction: column; }
   .footer-inner { flex-direction: column; }
@@ -210,4 +257,23 @@ details p { max-width: 720px; margin: 14px 0 0; color: var(--ink-soft); line-hei
   .dashboard-grid { gap: 9px; }.stat-card { padding: 15px; }.stat-card strong { font-size: 25px; }
   .task-row, .list-row { align-items: start; flex-direction: column; gap: 9px; padding: 15px; }
   .data-table th, .data-table td { padding: 13px 14px; }
+  .login-screen { align-items: start; padding: 18px 16px; }
+  .login-card { min-height: auto; border-radius: 18px; }
+  .login-logo-panel { padding: 26px 28px 16px; }
+  .login-logo-rings { width: 138px; height: 138px; font-size: 48px; }
+  .login-logo-rings::before { inset: 12px; }
+  .login-logo-rings::after { inset: 22px; }
+  .login-logo-title { margin-top: -54px; font-size: 18px; }
+  .login-logo-subtitle { font-size: 13px; }
+  .login-form { gap: 12px; padding: 0 28px 22px; }
+  .login-form h1 { margin-bottom: 4px; font-size: 31px; }
+  .login-field { gap: 7px; }
+  .login-field label { font-size: 18px; }
+  .login-field input, .login-primary, .login-provider { min-height: 54px; height: auto; font-size: 18px; }
+  .login-field input { padding: 0 18px; }
+  .login-provider { grid-template-columns: 54px 1fr 24px; }
+  .login-provider strong { font-size: 28px; }
+  .login-divider { gap: 16px; font-size: 17px; }
+  .login-link { margin-top: 5px; font-size: 16px; }
+  .login-register { font-size: 17px; }
 }
